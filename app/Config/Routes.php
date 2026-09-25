@@ -4,6 +4,8 @@ use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
 
+$routes->get('/', 'Welcome::index');
+
 $routes->get('/login', 'Login::index');
 $routes->post('/login/proses', 'Login::proses');
 $routes->get('/logout', 'Login::logout');
@@ -28,3 +30,11 @@ $routes->get('/kategori/hapus/(:num)', 'Kategori::hapus/$1');
 
 $routes->get('/kategori/edit/(:num)', 'Kategori::edit/$1');
 $routes->post('/kategori/update/(:num)', 'Kategori::update/$1');
+
+$routes->get('/konseling', 'Konseling::index');
+$routes->get('/konseling/tambah', 'Konseling::tambah');
+$routes->post('/konseling/simpan', 'Konseling::simpan');
+
+$routes->get('/konseling/edit/(:num)', 'Konseling::edit/$1');
+$routes->post('/konseling/update/(:num)', 'Konseling::update/$1');
+$routes->get('/konseling/hapus/(:num)', 'Konseling::hapus/$1');

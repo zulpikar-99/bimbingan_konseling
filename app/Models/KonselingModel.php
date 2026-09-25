@@ -11,7 +11,7 @@ class KonselingModel extends Model
 
     protected $allowedFields = [
         'id_siswa',
-        'id_guru',
+        'id_guru_bk',
         'id_kategori',
         'tanggal',
         'masalah',

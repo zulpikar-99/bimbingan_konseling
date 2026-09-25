@@ -18,14 +18,17 @@ class Login extends BaseController
 
         $model = new GuruBkModel();
 
-        $guru = $model->where('username', $username)->first();
+        $guru = $model
+            ->where('username', $username)
+            ->first();
 
         if ($guru && $password === $guru['password']) {
+
             session()->set([
-                'id_guru'   => $guru['id_guru'],
-                'nama_guru' => $guru['nama_guru'],
-                'username'  => $guru['username'],
-                'logged_in' => true
+                'id_guru_bk' => $guru['id_guru_bk'],
+                'nama_guru'  => $guru['nama_guru'],
+                'username'   => $guru['username'],
+                'logged_in'  => true
             ]);
 
             return redirect()->to('/dashboard');

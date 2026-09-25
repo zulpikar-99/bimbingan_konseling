@@ -1,3 +1,8 @@
+<?php
+$title = 'Data Siswa';
+$subtitle = 'Kelola data siswa sekolah';
+?>
+
 <?= $this->extend('layout/main') ?>
 
 <?= $this->section('content') ?>
